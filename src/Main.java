@@ -20,16 +20,14 @@ public class Main {
 
 // declaracion de variables
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-        Persona persona1;
-        Persona persona2;
-        Persona persona3;
-        Persona persona4;
+        Persona[] personas = new Persona[10];
         int edad;
         String nombre;
         double altura;
         double peso;
 
 //      formulario de persona
+/*
         System.out.println("Formulario de Persona");
         System.out.println("=====================");
         System.out.println();
@@ -41,20 +39,28 @@ public class Main {
         altura = scanner.nextDouble();
         System.out.print("Peso: ");
         peso = scanner.nextDouble();
+*/
 //      fin de formulario de persona
 
         // crear objeto persona1
-        persona1 = new Persona(nombre, edad, altura, peso);
-        persona2 = new Persona("Juan", 25, 1.75, 80);
-        persona3 = new Persona("Maria", 30, 1.65, 60);
-        persona4 = new Persona("Pedro", 40, 1.80, 90);
+//        personas[0] = new Persona(nombre, edad, altura, peso);
+        personas[0] = new Persona("Juan", 25, 1.75, 80);
+        personas[1] = new Persona("Juan", 25, 1.75, 80);
+        personas[2] = new Persona("Maria", 30, 1.65, 60);
+        personas[3] = new Persona("Pedro", 40, 1.80, 90);
+        personas[4] = new Persona("Luis", 35, 1.70, 70);
+        personas[5] = new Persona("Luis", 35, 1.70, 70);
+        personas[6] = new Persona("Luis", 35, 1.70, 70);
+        personas[7] = new Persona("Luis", 35, 1.70, 70);
+        personas[8] = new Persona("Luis", 35, 1.70, 70);
+        personas[9] = new Persona("Luis", 35, 1.70, 70);
+
 
 
         /* salida de datos */
+        for (int i = 0; i < personas.length; i++) {
+            System.out.println(personas[i].toSaludo());
+        }
 
-        System.out.println(persona1.toSaludo());
-        System.out.println(persona2.toSaludo());
-        System.out.println(persona3.toSaludo());
-        System.out.println(persona4.toSaludo());
     }
 }
