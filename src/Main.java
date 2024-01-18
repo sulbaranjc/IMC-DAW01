@@ -5,7 +5,7 @@ Objetivo : Calcular el IMC de una persona
  */
 
 /*
-*
+* la persistencia de datos la maneja la interfaz, debe gstionarla lotra clase que se encargue de la persistencia
 * */
 
 
