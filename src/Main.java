@@ -8,36 +8,19 @@ Objetivo : Calcular el IMC de una persona
 * la persistencia de datos la maneja la interfaz, debe gstionarla lotra clase que se encargue de la persistencia
 * */
 
-
-
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-// calcular  el IMC de una persona
-
         // gestor de personas
         GestorPersona gp = new GestorPersona();
-
-
-
-// declaracion de variables
         Scanner scannerNum = new Scanner(System.in).useLocale(Locale.US);
         Scanner scannerStr = new Scanner(System.in);
-
-        // Persona[] personas = new Persona[10];
-
-        int edad;
-        String nombre;
-        double altura;
-        double peso;
         boolean salir = false;
         int opcion; // Guardaremos la opcion del usuario
         do{
             menu();
-            System.out.print("Ingrese una opcion: ");
             opcion = scannerNum.nextInt();
             switch (opcion){
                 case 1:
@@ -73,7 +56,7 @@ public class Main {
         System.out.print("Ingrese una opcion: ");
     }
     private static void ingresarPersona(Scanner scannerStr, Scanner scannerNum, GestorPersona gp) {
-        // Ingreso de datos
+        // fomulario de ingreso de datos
         System.out.println("Formulario de Persona");
         System.out.println("=====================");
         System.out.println();
@@ -86,7 +69,6 @@ public class Main {
         System.out.print("Peso: ");
         double peso = scannerNum.nextDouble();
         System.out.println();
-
         // agregar a persona a la lista de personas
         gp.agregarPersona(new Persona(nombre, edad, altura, peso));
     }
@@ -96,7 +78,6 @@ public class Main {
         System.out.println("========================================");
         System.out.println("nombre edad altura     peso      imc");
         System.out.println("========================================");
-
         for (Persona p : gp.listarPersonas()) {
             System.out.println(p.toString());
         }
