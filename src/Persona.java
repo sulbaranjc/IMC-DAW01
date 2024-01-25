@@ -59,4 +59,14 @@ public class Persona {
     public String toSaludo(){
         return "El indice de masa corporal de "+nombre+" es "+ String.format("%.2f", imc)+" y su edad es "+edad+" años"+" y su peso es "+peso+" kg"+" y su altura es "+altura+" m";
     }
+    public String toString() {
+        return String.format(
+                "%s\t%d\t%.2f m\t%.2f kg\t%.2f",
+                getNombre(),
+                getEdad(),
+                getAltura(),
+                getPeso(),
+                getImc()
+        );
+    }
 }
