@@ -10,4 +10,17 @@ public class GestorPersona {
 
         return personas;
     }
+    public Persona getPersonaMayorIMC() {
+        Persona personaMayorIMC = null;
+        for (Persona p : personas) {
+            if (personaMayorIMC == null) {
+                personaMayorIMC = p;
+            } else {
+                if (p.getImc() > personaMayorIMC.getImc()) {
+                    personaMayorIMC = p;
+                }
+            }
+        }
+        return personaMayorIMC;
+    }
 }
