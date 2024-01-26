@@ -11,16 +11,11 @@ public class GestorPersona {
         return personas;
     }
     public Persona getPersonaMayorIMC() {
-        Persona personaMayorIMC = null;
+        Persona personaMayorIMC;
+        personaMayorIMC = personas.get(0);
         for (Persona p : personas) {
-            if (personaMayorIMC == null) {
-                personaMayorIMC = p;
-            } else {
-                if (p.getImc() > personaMayorIMC.getImc()) {
-                    personaMayorIMC = p;
-                }
+                if (p.getImc() > personaMayorIMC.getImc()) personaMayorIMC = p;
             }
-        }
         return personaMayorIMC;
     }
 }
